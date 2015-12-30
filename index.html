@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Ultra' rel='stylesheet' type='text/css'>
+	<meta charset="UTF-8">
+	<title>5m Explorer!</title>
+	<link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+	<img src="img/bg.jpg" alt="Background" class="bg">
+
+	<div class="texwrap1">
+		<div id="header">
+			<div id="headerc">
+				<img src="img/logo.png" alt="5 Minute Explorer">
+				<div id="login">
+					<a href="#login">Log in <small>&#9660;</small></a>
+					<div id="loginbox">
+						<input type="text" class="rounded" placeholder="username" name="username">
+						<input type="text" class="rounded" placeholder="password" name="password">
+						<button type="text" name="submit user">Go</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="main">
+			<div id="leftmain">
+				<div id="instructions">
+					<h1>Plan your entire trip <span class="subline">in under 5 minutes</span></h1>
+					<ol>
+						<li>Select your destination and budget <small>Where are you going and when?</small></li>
+						<li>Choose your activities <small>What do you want to do?</small></li>
+						<li>Edit your itinerary <small>Get it now!</small></li>
+					</ol>
+				</div>
+			</div>
+			<div id="rightmain">
+				<div id="rightc">
+					<div id="right1">
+						<h2>Where are you going?</h2>
+							<input type="text" class="rounded" placeholder="city or destination" name="place">
+
+							<h2>How long are you staying?</h2>
+							<div class="center">
+								<div class="outercenter">
+									<div class="innercenter">
+										<input type="number" min='1' class="numbox" value="3" name="days"><p class='bridgeline'> days <span class="optional">starting on <input type="image" src='img/cal.png' name='calendar' id='cal'></span></p>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<h2>What is your budget?</h2>
+							<div id="budget"><p id="lowrange">$</p><p id='midrange'>$$</p><p id='highrange'>$$$</p></div>
+						</div>
+						<button class='next' id='next'>What's the plan?</button>
+					</div>
+				</div>
+			</div>
+
+		<div id="footer">
+			<div id="footerc">
+				<ul class="footlinks">
+					<li><a href="#">Home</a></li>
+					<li class="sep">|</li>
+					<li><a href="#">Who are we</a></li>
+					<li class="sep">|</li>
+					<li><a href="#">Press</a></li>
+					<li class="sep">|</li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
+				<span id='rights'>All rights reserved</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="right2">
+		<h2>What do you feel like doing?</h2>
+		<ul class="circleicons" id="moods">
+			<li>
+				<img src="img/outdoors.png" alt="outdoors">
+			</li>
+			<li>
+				<img src="img/indoors.png" alt="indoors">
+			</li>
+			<li>
+				<img src="img/adventure.png" alt="adventure">
+			</li>
+			<li>
+				<img src="img/historic.png" alt="historic">
+			</li>
+			<li>
+				<img src="img/food.png" alt="food">
+			</li>
+			<li>
+				<img src="img/party.png" alt="party">
+			</li>
+			<li>
+				<img src="img/family.png" alt="family">
+			</li>
+			<li>
+				<img src="img/music.png" alt="music">
+			</li>
+			<li>
+				<img src="img/museums.png" alt="art & museums">
+			</li>
+			<li>
+				<img src="img/oddities.png" alt="oddities">
+			</li>
+			<li>
+				<img src="img/performances.png" alt="performances">
+			</li>
+			<li>
+				<img src="img/landmarks.png" alt="landmarks">
+			</li>
+			<li>
+				<img src="img/tours.png" alt="tours">
+			</li>
+			<li>
+				<img src="img/wandering.png" alt="wandering">
+			</li>
+		</ul>
+	</div>
+	<div id="right3">
+		<p>Some stuff</p>
+	</div>
+	<div id="left3">
+		<div id="itinerary">
+			<h4>Thursday, November 8</h4>
+			<ol id="am" start="8">
+				<li class='hour'><small>am</small><span class="event">Golfing at the Donalda Club</span></li>
+				<li class='hour'></li>
+				<li class='hour'></li>
+				<li class='hour'></li>
+				<li class='hour'></li>
+				<li class='hour resetcounter'><small>pm</small><span class="event">Lunch in the Distillery District</span></li>
+				<li class='hour'><span class="event">&nbsp &nbsp &nbsp Royal Ontario Museam</span></li>
+				<li class='hour'></li>
+				<li class='hour'></li>
+				<li class='hour'><span class="event">&nbsp &nbsp &nbsp Live Jazz at The Rex Hotel</span></li>
+				<li class='hour'></li>
+				<li class='hour'></li>
+				<li class='hour'><span class="event">&nbsp &nbsp &nbsp Wine tasting in Kensington Market</span></li>
+				<li class='hour'></li>
+				<li class='hour'></li>
+				<li class='hour'></li>
+			</ol>
+		</div>
+	</div>
+
+	<script type="text/javascript" src='script.js'></script>
+</body>
+</html>

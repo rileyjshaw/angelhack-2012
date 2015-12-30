@@ -1,0 +1,29 @@
+<?php
+
+include "include/mysql.php";
+$mysql = new mysql;
+$mysql->dbconnect();
+
+function parse_preferences($user_pref_data, $tags) {
+    $total = 0;
+    $results = array();
+    $top = array();
+    $user_prefs = explode(',', $user_pref_data);
+    $res = mysql_query("SELECT * FROM content WHERE search_tags LIKE '%$tags%'");
+    while($row = mysql_fetch_assoc($res)) {
+        $results['name'][] = $row['name'];
+        $results['rankings'][] = $row['rankings'];
+    }
+    for($x = 0; $x < count($results['name']); $x++) {
+        $destination = $results['name'][$x];
+        $rankings = explode(',', $results['rankings'][$x]);
+        for($i = 0; $i < count($user_prefs); $i++) {
+            $top[$destination]['rankings'] += ($user_prefs[$i] * $results['rankings'][$i]);
+        }
+    }
+        print_r($top);
+}
+
+parse_preferences("2, 2.5, 2, 0.5, 0.5, 0.5, 0.5, 0.5, 1.0, 1.5, 0.5, 0.5, 0.5, 0.5", 'mus');
+
+?>
